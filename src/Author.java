@@ -5,5 +5,6 @@ public class Author {
     public Author(String nameAuthor, String lastnameAuthor) {
         this.nameAuthor = nameAuthor;
         this.lastnameAuthor = lastnameAuthor;
+
     }
 }

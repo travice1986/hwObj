@@ -10,7 +10,7 @@ public class Main {
         System.out.println();
 
         Author bookTwo = new Author("Лев", "Толстой");
-        Book bookNew = new Book("Анна Каренина", bookTwo, 2014);
+        Book bookNew = new Book("Анна Каренина", bookTwo, 2013);
         bookNew.setPublishingYear(2023);
         System.out.println("Название книги: " + bookNew.getTitle());
         System.out.println("Автор книги: " + bookNew.getAuthor().nameAuthor + " " + bookNew.getAuthor().lastnameAuthor);
