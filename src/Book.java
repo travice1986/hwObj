@@ -1,7 +1,7 @@
 public class Book {
     private final String title;
     private final Author author;
-    private int publishingYear;
+    private final int publishingYear;
 
     public Book(String title, Author author, int publishingYear) {
         this.title = title;
@@ -9,19 +9,21 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
-    public String getTitle() {
-        return this.title;
-    }
+   @Override
+    public String toString() {
+        return "Название книги: " + this.title + "\n" +
+                "Автор книги: " + this.author + "\n" + "Год издания: " + this.publishingYear;
+   }
 
-    public Author getAuthor() {
-        return this.author;
-    }
-
-    public int getPublisherYear() {
-        return this.publishingYear;
-    }
-
-    public void setPublishingYear(int publishingYear) {
-        this.publishingYear = publishingYear;
+   @Override
+    public boolean equals(Object other) {
+       if (other == null || getClass() != other.getClass()) return  false;
+       Book that = (Book) other;
+       if (publishingYear != that.publishingYear) return  false;
+       return title.equals(that.title);
+   }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(title, publishingYear);
     }
 }
