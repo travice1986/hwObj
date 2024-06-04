@@ -7,13 +7,13 @@ public class Main {
         System.out.println();
 
         Author bookTwo = new Author("Фёдор", "Достоевский");
-        Book bookNew = new Book("Идиот", bookTwo, 2016);
+        Book bookNew = new Book("Идиот", bookTwo, 2015);
 
         System.out.println(bookNew);
 
         System.out.println();
 
-        if (book.equals(bookNew) && bookTwo.equals(bookOne)) {
+        if (book.equals(bookNew)) {
             System.out.println("Книги дублируются");
         } else {
             System.out.println("Книги разные");

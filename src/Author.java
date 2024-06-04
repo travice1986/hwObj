@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Author {
     private final String nameAuthor;
     private final String lastnameAuthor;
@@ -12,12 +14,13 @@ public class Author {
         return "Автор книги: " + this.nameAuthor + " " + this.lastnameAuthor;
     }
 
+
     @Override
-    public boolean equals(Object other) {
-        if (other == null || getClass() != other.getClass()) return  false;
-        Author that = (Author) other;
-        if (!lastnameAuthor.equals(that.lastnameAuthor)) return  false;
-        return nameAuthor.equals(that.nameAuthor);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(nameAuthor, author.nameAuthor) && Objects.equals(lastnameAuthor, author.lastnameAuthor);
     }
 
     @Override
